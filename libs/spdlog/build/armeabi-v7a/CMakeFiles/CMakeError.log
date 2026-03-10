@@ -1,0 +1,87 @@
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: C:/Users/yan/AndroidStudioProjects/rpo/libs/spdlog/build/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/yan/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_96ed3 && [1/2] Building CXX object CMakeFiles/cmTC_96ed3.dir/src.cxx.o
+FAILED: CMakeFiles/cmTC_96ed3.dir/src.cxx.o 
+C:\Users\yan\AppData\Local\Android\Sdk\ndk\28.2.13676358\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=armv7-none-linux-androideabi21 --sysroot=C:/Users/yan/AppData/Local/Android/Sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DCMAKE_HAVE_LIBC_PTHREAD  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -DSPDLOG_COMPILED_LIB  -fPIE -std=c++11 -MD -MT CMakeFiles/cmTC_96ed3.dir/src.cxx.o -MF CMakeFiles\cmTC_96ed3.dir\src.cxx.o.d -o CMakeFiles/cmTC_96ed3.dir/src.cxx.o -c C:/Users/yan/AndroidStudioProjects/rpo/libs/spdlog/build/armeabi-v7a/CMakeFiles/CMakeTmp/src.cxx
+C:/Users/yan/AndroidStudioProjects/rpo/libs/spdlog/build/armeabi-v7a/CMakeFiles/CMakeTmp/src.cxx:13:3: error: use of undeclared identifier 'pthread_cancel'
+   13 |   pthread_cancel(thread);
+      |   ^
+1 error generated.
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: C:/Users/yan/AndroidStudioProjects/rpo/libs/spdlog/build/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/yan/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_53ee9 && [1/2] Building CXX object CMakeFiles/cmTC_53ee9.dir/CheckFunctionExists.cxx.o
+[2/2] Linking CXX executable cmTC_53ee9
+FAILED: cmTC_53ee9 
+cmd.exe /C "cd . && C:\Users\yan\AppData\Local\Android\Sdk\ndk\28.2.13676358\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=armv7-none-linux-androideabi21 --sysroot=C:/Users/yan/AppData/Local/Android/Sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -DSPDLOG_COMPILED_LIB -DCHECK_FUNCTION_EXISTS=pthread_create -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments CMakeFiles/cmTC_53ee9.dir/CheckFunctionExists.cxx.o -o cmTC_53ee9  -lpthreads  -latomic -lm && cd ."
+ld.lld: error: unable to find library -lpthreads
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the function pthread_create exists in the pthread failed with the following output:
+Change Dir: C:/Users/yan/AndroidStudioProjects/rpo/libs/spdlog/build/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/yan/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_e33da && [1/2] Building CXX object CMakeFiles/cmTC_e33da.dir/CheckFunctionExists.cxx.o
+[2/2] Linking CXX executable cmTC_e33da
+FAILED: cmTC_e33da 
+cmd.exe /C "cd . && C:\Users\yan\AppData\Local\Android\Sdk\ndk\28.2.13676358\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=armv7-none-linux-androideabi21 --sysroot=C:/Users/yan/AppData/Local/Android/Sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -DSPDLOG_COMPILED_LIB -DCHECK_FUNCTION_EXISTS=pthread_create -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments CMakeFiles/cmTC_e33da.dir/CheckFunctionExists.cxx.o -o cmTC_e33da  -lpthread  -latomic -lm && cd ."
+ld.lld: error: unable to find library -lpthread
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the fwrite_unlocked exist failed with the following output:
+Change Dir: C:/Users/yan/AndroidStudioProjects/rpo/libs/spdlog/build/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/yan/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_fa5a8 && [1/2] Building CXX object CMakeFiles/cmTC_fa5a8.dir/CheckSymbolExists.cxx.o
+FAILED: CMakeFiles/cmTC_fa5a8.dir/CheckSymbolExists.cxx.o 
+C:\Users\yan\AppData\Local\Android\Sdk\ndk\28.2.13676358\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=armv7-none-linux-androideabi21 --sysroot=C:/Users/yan/AppData/Local/Android/Sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -DSPDLOG_COMPILED_LIB  -fPIE -std=c++11 -MD -MT CMakeFiles/cmTC_fa5a8.dir/CheckSymbolExists.cxx.o -MF CMakeFiles\cmTC_fa5a8.dir\CheckSymbolExists.cxx.o.d -o CMakeFiles/cmTC_fa5a8.dir/CheckSymbolExists.cxx.o -c C:/Users/yan/AndroidStudioProjects/rpo/libs/spdlog/build/armeabi-v7a/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+C:/Users/yan/AndroidStudioProjects/rpo/libs/spdlog/build/armeabi-v7a/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: use of undeclared identifier 'fwrite_unlocked'
+    8 |   return ((int*)(&fwrite_unlocked))[argc];
+      |                   ^
+1 error generated.
+ninja: build stopped: subcommand failed.
+
+
+File C:/Users/yan/AndroidStudioProjects/rpo/libs/spdlog/build/armeabi-v7a/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <stdio.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef fwrite_unlocked
+  return ((int*)(&fwrite_unlocked))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
