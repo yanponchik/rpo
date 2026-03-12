@@ -13,4 +13,10 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="PadButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:backgroundTint">#000000</item>
+    </style>
 </resources>

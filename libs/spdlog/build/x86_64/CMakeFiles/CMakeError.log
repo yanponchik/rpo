@@ -1,9 +1,9 @@
 Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: C:/Users/yan/AndroidStudioProjects/rpo/libs/spdlog/build/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Users/yan/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_a54e2 && [1/2] Building CXX object CMakeFiles/cmTC_a54e2.dir/src.cxx.o
-FAILED: CMakeFiles/cmTC_a54e2.dir/src.cxx.o 
-C:\Users\yan\AppData\Local\Android\Sdk\ndk\28.2.13676358\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=x86_64-none-linux-android21 --sysroot=C:/Users/yan/AppData/Local/Android/Sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DCMAKE_HAVE_LIBC_PTHREAD  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -DSPDLOG_COMPILED_LIB  -fPIE -std=c++11 -MD -MT CMakeFiles/cmTC_a54e2.dir/src.cxx.o -MF CMakeFiles\cmTC_a54e2.dir\src.cxx.o.d -o CMakeFiles/cmTC_a54e2.dir/src.cxx.o -c C:/Users/yan/AndroidStudioProjects/rpo/libs/spdlog/build/x86_64/CMakeFiles/CMakeTmp/src.cxx
+Run Build Command(s):C:/Users/yan/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_419e0 && [1/2] Building CXX object CMakeFiles/cmTC_419e0.dir/src.cxx.o
+FAILED: CMakeFiles/cmTC_419e0.dir/src.cxx.o 
+C:\Users\yan\AppData\Local\Android\Sdk\ndk\28.2.13676358\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=x86_64-none-linux-android21 --sysroot=C:/Users/yan/AppData/Local/Android/Sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DCMAKE_HAVE_LIBC_PTHREAD  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -DSPDLOG_COMPILED_LIB  -fPIE -std=c++11 -MD -MT CMakeFiles/cmTC_419e0.dir/src.cxx.o -MF CMakeFiles\cmTC_419e0.dir\src.cxx.o.d -o CMakeFiles/cmTC_419e0.dir/src.cxx.o -c C:/Users/yan/AndroidStudioProjects/rpo/libs/spdlog/build/x86_64/CMakeFiles/CMakeTmp/src.cxx
 C:/Users/yan/AndroidStudioProjects/rpo/libs/spdlog/build/x86_64/CMakeFiles/CMakeTmp/src.cxx:13:3: error: use of undeclared identifier 'pthread_cancel'
    13 |   pthread_cancel(thread);
       |   ^
@@ -35,10 +35,10 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: C:/Users/yan/AndroidStudioProjects/rpo/libs/spdlog/build/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Users/yan/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_24cf5 && [1/2] Building CXX object CMakeFiles/cmTC_24cf5.dir/CheckFunctionExists.cxx.o
-[2/2] Linking CXX executable cmTC_24cf5
-FAILED: cmTC_24cf5 
-cmd.exe /C "cd . && C:\Users\yan\AppData\Local\Android\Sdk\ndk\28.2.13676358\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=x86_64-none-linux-android21 --sysroot=C:/Users/yan/AppData/Local/Android/Sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -DSPDLOG_COMPILED_LIB -DCHECK_FUNCTION_EXISTS=pthread_create -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments CMakeFiles/cmTC_24cf5.dir/CheckFunctionExists.cxx.o -o cmTC_24cf5  -lpthreads  -latomic -lm && cd ."
+Run Build Command(s):C:/Users/yan/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_ee9d8 && [1/2] Building CXX object CMakeFiles/cmTC_ee9d8.dir/CheckFunctionExists.cxx.o
+[2/2] Linking CXX executable cmTC_ee9d8
+FAILED: cmTC_ee9d8 
+cmd.exe /C "cd . && C:\Users\yan\AppData\Local\Android\Sdk\ndk\28.2.13676358\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=x86_64-none-linux-android21 --sysroot=C:/Users/yan/AppData/Local/Android/Sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -DSPDLOG_COMPILED_LIB -DCHECK_FUNCTION_EXISTS=pthread_create -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments CMakeFiles/cmTC_ee9d8.dir/CheckFunctionExists.cxx.o -o cmTC_ee9d8  -lpthreads  -latomic -lm && cd ."
 ld.lld: error: unable to find library -lpthreads
 clang++: error: linker command failed with exit code 1 (use -v to see invocation)
 ninja: build stopped: subcommand failed.
@@ -48,10 +48,10 @@ ninja: build stopped: subcommand failed.
 Determining if the function pthread_create exists in the pthread failed with the following output:
 Change Dir: C:/Users/yan/AndroidStudioProjects/rpo/libs/spdlog/build/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Users/yan/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_99f3d && [1/2] Building CXX object CMakeFiles/cmTC_99f3d.dir/CheckFunctionExists.cxx.o
-[2/2] Linking CXX executable cmTC_99f3d
-FAILED: cmTC_99f3d 
-cmd.exe /C "cd . && C:\Users\yan\AppData\Local\Android\Sdk\ndk\28.2.13676358\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=x86_64-none-linux-android21 --sysroot=C:/Users/yan/AppData/Local/Android/Sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -DSPDLOG_COMPILED_LIB -DCHECK_FUNCTION_EXISTS=pthread_create -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments CMakeFiles/cmTC_99f3d.dir/CheckFunctionExists.cxx.o -o cmTC_99f3d  -lpthread  -latomic -lm && cd ."
+Run Build Command(s):C:/Users/yan/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_57bf6 && [1/2] Building CXX object CMakeFiles/cmTC_57bf6.dir/CheckFunctionExists.cxx.o
+[2/2] Linking CXX executable cmTC_57bf6
+FAILED: cmTC_57bf6 
+cmd.exe /C "cd . && C:\Users\yan\AppData\Local\Android\Sdk\ndk\28.2.13676358\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=x86_64-none-linux-android21 --sysroot=C:/Users/yan/AppData/Local/Android/Sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -DSPDLOG_COMPILED_LIB -DCHECK_FUNCTION_EXISTS=pthread_create -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments CMakeFiles/cmTC_57bf6.dir/CheckFunctionExists.cxx.o -o cmTC_57bf6  -lpthread  -latomic -lm && cd ."
 ld.lld: error: unable to find library -lpthread
 clang++: error: linker command failed with exit code 1 (use -v to see invocation)
 ninja: build stopped: subcommand failed.
@@ -61,9 +61,9 @@ ninja: build stopped: subcommand failed.
 Determining if the fwrite_unlocked exist failed with the following output:
 Change Dir: C:/Users/yan/AndroidStudioProjects/rpo/libs/spdlog/build/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Users/yan/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_262dd && [1/2] Building CXX object CMakeFiles/cmTC_262dd.dir/CheckSymbolExists.cxx.o
-FAILED: CMakeFiles/cmTC_262dd.dir/CheckSymbolExists.cxx.o 
-C:\Users\yan\AppData\Local\Android\Sdk\ndk\28.2.13676358\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=x86_64-none-linux-android21 --sysroot=C:/Users/yan/AppData/Local/Android/Sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -DSPDLOG_COMPILED_LIB  -fPIE -std=c++11 -MD -MT CMakeFiles/cmTC_262dd.dir/CheckSymbolExists.cxx.o -MF CMakeFiles\cmTC_262dd.dir\CheckSymbolExists.cxx.o.d -o CMakeFiles/cmTC_262dd.dir/CheckSymbolExists.cxx.o -c C:/Users/yan/AndroidStudioProjects/rpo/libs/spdlog/build/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Run Build Command(s):C:/Users/yan/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ninja.exe cmTC_8ee4c && [1/2] Building CXX object CMakeFiles/cmTC_8ee4c.dir/CheckSymbolExists.cxx.o
+FAILED: CMakeFiles/cmTC_8ee4c.dir/CheckSymbolExists.cxx.o 
+C:\Users\yan\AppData\Local\Android\Sdk\ndk\28.2.13676358\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=x86_64-none-linux-android21 --sysroot=C:/Users/yan/AppData/Local/Android/Sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -DSPDLOG_COMPILED_LIB  -fPIE -std=c++11 -MD -MT CMakeFiles/cmTC_8ee4c.dir/CheckSymbolExists.cxx.o -MF CMakeFiles\cmTC_8ee4c.dir\CheckSymbolExists.cxx.o.d -o CMakeFiles/cmTC_8ee4c.dir/CheckSymbolExists.cxx.o -c C:/Users/yan/AndroidStudioProjects/rpo/libs/spdlog/build/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
 C:/Users/yan/AndroidStudioProjects/rpo/libs/spdlog/build/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: use of undeclared identifier 'fwrite_unlocked'
     8 |   return ((int*)(&fwrite_unlocked))[argc];
       |                   ^

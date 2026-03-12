@@ -15,12 +15,22 @@ set_target_properties(spdlog PROPERTIES IMPORTED_LOCATION
 add_library(${PROJECT_NAME} SHARED
     native-lib.cpp)
 
+add_library(mbedcrypto SHARED IMPORTED)
+
+set_target_properties(mbedcrypto PROPERTIES IMPORTED_LOCATION
+    "C:/Users/yan/AndroidStudioProjects/rpo/libs/mbedtls/build/${ANDROID_ABI}/library/libmbedcrypto.so")
+
+
 # Подключаем заголовки spdlog
 target_include_directories(${PROJECT_NAME} PUBLIC
-    "C:/Users/yan/AndroidStudioProjects/rpo/libs/spdlog/spdlog/include")
+    "C:/Users/yan/AndroidStudioProjects/rpo/libs/spdlog/spdlog/include"
+    "C:/Users/yan/AndroidStudioProjects/rpo/libs/mbedtls/mbedtls/include"
+    )
+
 
 # Линкуем с системными библиотеками и spdlog
 target_link_libraries(${PROJECT_NAME}
     android
     log
+    mbedcrypto
     spdlog)

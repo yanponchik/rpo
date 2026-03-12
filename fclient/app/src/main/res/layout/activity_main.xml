@@ -7,13 +7,28 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/sample_text"
+        android:id="@+id/txtAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="100dp"
+        android:text="Сумма: —"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/sample_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/black"
+        android:backgroundTintMode="add"
+        android:onClick="onButtonClick"
+        android:text="Click On Me"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtAmount"
+        tools:ignore="OnClick" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+
